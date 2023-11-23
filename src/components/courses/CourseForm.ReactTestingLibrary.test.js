@@ -27,6 +27,7 @@ it('Should label save button as "Save" when not saving', () => {
 });
 
 it('Should label save button as "Saving..." when saving', () => {
-  const { getByText } = renderCourseForm({ saving: true });
+  const { getByText, debug } = renderCourseForm({ saving: true });
+  debug();
   getByText("Saving...");
 });
